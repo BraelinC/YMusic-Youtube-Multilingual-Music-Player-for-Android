@@ -11,8 +11,10 @@ workflows:
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
       - name: Accept SDK licenses
         script: yes | sdkmanager --licenses >/dev/null 2>&1 || true
+      - name: Make gradlew executable
+        script: chmod +x ./gradlew
       - name: Build Debug APK
-        script: ./gradlew :app:assembleDebug --stacktrace --console=plain
+        script: sh ./gradlew :app:assembleDebug --stacktrace --console=plain
     artifacts:
       - app/build/outputs/**/*.apk
       - app/build/outputs/**/mapping.txt
