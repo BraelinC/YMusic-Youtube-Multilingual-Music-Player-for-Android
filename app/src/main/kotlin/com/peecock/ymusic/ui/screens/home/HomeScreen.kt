@@ -253,7 +253,7 @@ fun HomeScreen(
                     Item(2, stringResource(R.string.artists), R.drawable.artists)
                     Item(3, stringResource(R.string.albums), R.drawable.album)
                     Item(4, stringResource(R.string.playlists), R.drawable.library)
-                    Item(5, stringResource(R.string.ai_daily), R.drawable.ic_ai_robot)
+                    Item(5, "AI", R.drawable.ic_ai_robot)
                     //Item(5, stringResource(R.string.discovery), R.drawable.megaphone)
                     //if (showSearchTab)
                     //Item(6, stringResource(R.string.search), R.drawable.search)
